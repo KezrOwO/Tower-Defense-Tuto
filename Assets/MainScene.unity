@@ -2817,6 +2817,7 @@ GameObject:
   - component: {fileID: 330585545}
   - component: {fileID: 330585544}
   - component: {fileID: 330585547}
+  - component: {fileID: 330585548}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -2891,13 +2892,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.37015408, y: -0.60270834, z: 0.37060043, w: 0.6019834}
-  m_LocalPosition: {x: 73.91622, y: 81.02969, z: 40.169384}
+  m_LocalRotation: {x: 0.5803832, y: 0.000978625, z: -0.00069450366, w: 0.81434274}
+  m_LocalPosition: {x: 40.35403, y: 82.19794, z: 12.02275}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 63.174, y: -90.069, z: 0}
+  m_LocalEulerAnglesHint: {x: 63.174, y: 0, z: 0}
 --- !u!114 &330585547
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2942,6 +2943,19 @@ MonoBehaviour:
     m_MipBias: 0
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
+--- !u!114 &330585548
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 330585543}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b14f5480fb66c0a47b9e88ea7e7c545d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  panSpeed: 30
 --- !u!1001 &337361355
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10658,6 +10672,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1239110971}
   - component: {fileID: 1239110970}
+  - component: {fileID: 1239110972}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -10697,6 +10712,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1239110972
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1239110969}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d3f57df523d10849938f3799760cb75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  standardTurretPrefab: {fileID: 2618675755220161033, guid: 355f147581e14ef4185732d078a05961,
+    type: 3}
 --- !u!1001 &1248002962
 PrefabInstance:
   m_ObjectHideFlags: 0
