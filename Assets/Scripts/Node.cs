@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class Node : MonoBehaviour
 {
@@ -10,27 +11,45 @@ public class Node : MonoBehaviour
 
     public Vector3 positionOffset;
 
+    private BuildManager bM;
+
     private void Start()
     {
         rend = GetComponent<Renderer>();
         startColor = rend.material.color;
+
+        bM = BuildManager.instance;
     }
 
     private void OnMouseDown()
     {
+
+        if(EventSystem.current.IsPointerOverGameObject())
+            return;
+
+        if (bM.GetTurretToBuild() == null)
+            return;
+
         if (turret != null)
         {
             Debug.Log("Déjà une tourelle");
             return;
         }
 
-        GameObject turretToBuild = BuildManager.instance.GetTurretToBuild();
+
+        GameObject turretToBuild = bM.GetTurretToBuild();
         turret =  Instantiate(turretToBuild, transform.position + positionOffset, transform.rotation);
        
     }
 
     private void OnMouseEnter()
     {
+        if (EventSystem.current.IsPointerOverGameObject())
+            return; 
+
+        if (bM.GetTurretToBuild() == null)
+            return;
+
         rend.material.color = hoverColor;
     }
 
