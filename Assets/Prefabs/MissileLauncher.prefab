@@ -25,7 +25,7 @@ Transform:
   m_GameObject: {fileID: 2509142911748439889}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.0047, z: -0.0166}
+  m_LocalPosition: {x: -0, y: 0.0047, z: 0.01438}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -81,7 +81,7 @@ MonoBehaviour:
   enemyTag: Enemy
   partToRotate: {fileID: 2493041527355253719}
   fireRate: 0.3
-  bulletPrefab: {fileID: 4554767386389884592, guid: 92cf0a2bc2f8b784c9258194588aaff9,
+  bulletPrefab: {fileID: 1436056536771181704, guid: 02ee757b3ac256a46b6c48e8edc853b3,
     type: 3}
   firePoint: {fileID: 5875869937839661540}
 --- !u!1 &4094466971475616583
