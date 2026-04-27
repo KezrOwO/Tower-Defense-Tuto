@@ -11,6 +11,11 @@ public class Shop : MonoBehaviour
     }
     public void PurchaseStandardTurret()
     {
-        bM.SetTurretToBudild(bM.standardTurretPrefab);
+        bM.SetTurretToBudild(bM.standardTurretPrefab); 
+    }
+
+    public void PurchaseMissileLauncher()
+    {
+        bM.SetTurretToBudild(bM.missileLauncherPrefab);
     }
 }
