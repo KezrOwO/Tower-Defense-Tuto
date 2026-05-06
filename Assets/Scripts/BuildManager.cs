@@ -15,9 +15,6 @@ public class BuildManager : MonoBehaviour
     }
     #endregion
 
-    public GameObject standardTurretPrefab;
-    public GameObject missileLauncherPrefab;
-
     public GameObject buildEffect;
 
     private TurretBlueprint turretToBuild;
