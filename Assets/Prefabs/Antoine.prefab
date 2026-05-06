@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8713224589603955542}
   - component: {fileID: 6242488782576010411}
   m_Layer: 0
-  m_Name: Enemy
+  m_Name: Antoine
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -118,4 +118,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80117683d0b1b9e4a86dbf7fa8851dc3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 15
+  speed: 12
+  health: 100
+  value: 50
+  deathEffect: {fileID: 1964425684987646222, guid: 2d05d3587ed66e4409d3b741f666ac71,
+    type: 3}
