@@ -34,6 +34,7 @@ public class WaveSpawner : MonoBehaviour
     {
 
         indexWave++;
+        PlayerStats.rounds++;
 
         for (int i = 0; i < indexWave; i++)
         {
