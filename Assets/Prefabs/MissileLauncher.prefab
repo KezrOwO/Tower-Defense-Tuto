@@ -78,12 +78,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   range: 25
-  enemyTag: Enemy
-  partToRotate: {fileID: 2493041527355253719}
-  fireRate: 0.3
   bulletPrefab: {fileID: 1436056536771181704, guid: 02ee757b3ac256a46b6c48e8edc853b3,
     type: 3}
+  fireRate: 0.3
+  useLaser: 0
+  dmgOverTime: 30
+  slowPCT: 0.5
+  lineRenderer: {fileID: 0}
+  impactEffect: {fileID: 0}
+  impactLight: {fileID: 0}
+  enemyTag: Enemy
   firePoint: {fileID: 5875869937839661540}
+  partToRotate: {fileID: 2493041527355253719}
 --- !u!1 &4094466971475616583
 GameObject:
   m_ObjectHideFlags: 0
