@@ -74,7 +74,17 @@ public class Node : MonoBehaviour
         Destroy(effect, 1f);
         Debug.Log("Tourelle construite");
     }
+    public void SellTurret()
+    {
+        PlayerStats.money += turretBlueprint.GetSellAmount();
 
+        GameObject effect = Instantiate(bM.buildEffect, GetBuildPosition(), Quaternion.identity);
+        Destroy(effect, 1f);
+
+        Destroy(turret);
+        turretBlueprint = null;
+        isUpgraded = false; 
+    }
     private void OnMouseDown()
     {
 
