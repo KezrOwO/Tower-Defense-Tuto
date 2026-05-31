@@ -5077,8 +5077,9 @@ MonoBehaviour:
   laserBeamerTurret:
     prefab: {fileID: 3645794757575020719, guid: 655f72c2b92de4b42888230a6254c57b,
       type: 3}
-    upgradePrefab: {fileID: 0}
-    upgradeCost: 0
+    upgradePrefab: {fileID: 3645794757575020719, guid: f5b3260e925e4ae448f4d066381f1f63,
+      type: 3}
+    upgradeCost: 200
     cost: 350
 --- !u!1001 &463848759
 PrefabInstance:
