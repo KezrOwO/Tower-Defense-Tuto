@@ -6,6 +6,9 @@ public class GameOver : MonoBehaviour
 {
     public TextMeshProUGUI roundsText;
 
+    public SceneFader sceneFader;
+    public string sceneMenu = "MainMenu";
+
 
     void OnEnable()
     {
@@ -14,12 +17,12 @@ public class GameOver : MonoBehaviour
 
     public void Retry()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        sceneFader.FadeTo(SceneManager.GetActiveScene().name);
     }
 
     public void Menu()
     {
-        Debug.Log("Direction le menu principal");
+        sceneFader.FadeTo(sceneMenu);
     }
     
 }

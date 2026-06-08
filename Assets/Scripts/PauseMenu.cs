@@ -5,6 +5,8 @@ using UnityEngine.UI;
 public class PauseMenu : MonoBehaviour
 {
     public GameObject ui;
+    public SceneFader sceneFader;
+    public string sceneName = "MainMenu";
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.P))
@@ -30,11 +32,13 @@ public class PauseMenu : MonoBehaviour
     public void Retry()
     {
         Toggle();
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        sceneFader.FadeTo(SceneManager.GetActiveScene().name);
+
     }
 
     public void MainMenu()
     {
-        Debug.Log("Chargement du main menu ");
+        Toggle();
+        sceneFader.FadeTo(sceneName);
     }
 }
