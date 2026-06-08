@@ -4,7 +4,10 @@ using TMPro;
 
 public class WaveSpawner : MonoBehaviour
 {
-    [SerializeField] private Transform enemyPrefab;
+    public static int EnemiesAlive = 0;
+
+    public Wave[] waves;
+
     [SerializeField] private Transform spawnPoint;
     
 
@@ -18,10 +21,16 @@ public class WaveSpawner : MonoBehaviour
 
     private void Update()
     {
+        if(EnemiesAlive > 0)
+        {
+            return;
+        }
+
         if (countDown <= 0)
         {
             StartCoroutine(SpawnWave());
             countDown = timeBetweenWaves;
+            return;
         }
 
         countDown -= Time.deltaTime;
@@ -33,19 +42,28 @@ public class WaveSpawner : MonoBehaviour
     private IEnumerator SpawnWave()
     {
 
-        indexWave++;
+        
         PlayerStats.rounds++;
 
-        for (int i = 0; i < indexWave; i++)
+        Wave wave = waves[indexWave];
+
+        for (int i = 0; i < wave.count; i++)
         {
-            SpawnEnemy();
-            yield return new WaitForSeconds(0.5f);
+            SpawnEnemy(wave.enemy);
+            yield return new WaitForSeconds(1f / wave.rate);
         }
 
+        indexWave++;
+        if(indexWave == waves.Length)
+        {
+            Debug.Log("Niveau terminé , GG");
+            this.enabled = false;
+        }
     }
 
-    private void SpawnEnemy()
+    private void SpawnEnemy(GameObject enemy)
     {
-        Instantiate(enemyPrefab, spawnPoint.position, spawnPoint.rotation);
+        Instantiate(enemy, spawnPoint.position, spawnPoint.rotation);
+        EnemiesAlive++;
     }
 }
