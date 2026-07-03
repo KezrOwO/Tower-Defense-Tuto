@@ -21,11 +21,22 @@ public class WaveSpawner : MonoBehaviour
 
     private int indexWave = 0;
 
+    private void Start()
+    {
+        EnemiesAlive = 0;
+    }
+
     private void Update()
     {
         if(EnemiesAlive > 0)
         {
             return;
+        }
+
+        if (indexWave == waves.Length)
+        {
+            gameManager.WinLevel();
+            this.enabled = false;
         }
 
         if (countDown <= 0)
@@ -58,11 +69,7 @@ public class WaveSpawner : MonoBehaviour
         }
 
         indexWave++;
-        if(indexWave == waves.Length)
-        {
-            gameManager.WinLevel();
-            this.enabled = false;
-        }
+        
     }
 
     private void SpawnEnemy(GameObject enemy)
